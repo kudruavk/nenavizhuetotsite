@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_dcROtXiOFuv1ZZsILL4z4');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_oi2f4io', 'template_nw7xsak', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200&family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;1,500&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    
+        <div class="left">
+                <h2>Contact us</h2>
+                    <div class="ikonki">
+                            <div class="first">
+                               <div class="border"> <i class="fa fab fa-facebook-f"></i></div>
+                               <div class="border"> <i class="fa fab fa-instagram"></i></div>
+                               <div class="border"> <i class="fa fab fa-twitter"></i></div>
+                            </div>
+                    </div>
+                    <p class="oruse">or use our contact form</p>
+                    <div class="">
+                        <p></p>
+                        <input placeholder="Email" type="email" name="email">
+                    </div>
+                    <div class="">
+                        <p></p>
+                        <input placeholder="Phone number" type="tel" name="phone">
+                    </div>
+                    <p class="oruse">Type your message here</p>
+                    <div class="">
+                        <textarea name="text" id="" cols="25" rows="5"></textarea>
+                    </div>
+                    <p class="orus"><a href="">Need additional help?</a></p>
+                    <div class="contactme">
+                        <p class="contactmetxt">Contact me</p>
+                    </div>
+        </div>
+        <div class="right">
+                <div class="textcenterpos">
+                <h1>Hello, user!</h1>
+                <p class="ifu">If you want to know abot our  project than zxzxczxczxc</p>
+                    <div class="strelka"><i class="fa fas fa-backward"></i></div>
+                </div>
+        </div>
+        
+    </div>
+    <div class="kruzhok">
+
+    </div>
+    <div class="righttop"><svg class="svg">
+        <clipPath id="triangle" clipPathUnits="objectBoundingBox">
+          <path d="M0.05,0.05 h1 v1"></path>
+        </clipPath>
+      </svg></div>
+</body>
+</html>
